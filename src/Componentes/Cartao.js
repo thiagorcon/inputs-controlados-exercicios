@@ -1,5 +1,5 @@
 import { CVC, DesignDoCartao, FormaDePagamento, LogoLabenu, LogoMasterCard, Nome, NumeroDoCartao, Validade } from "./estiloDoCartao";
-
+import Formulario from "./Formulario";
 
 
 function Cartao(props) {
@@ -19,7 +19,7 @@ function Cartao(props) {
             <Nome>
                 {props.nome}
             </Nome>
-
+                {props.nome} {props.sobrenome}
             <CVC>
                 cvc:{props.cvc}
             </CVC>
