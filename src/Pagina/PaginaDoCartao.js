@@ -37,19 +37,21 @@ function PaginaDoCartao(props) {
         setCodigoCartao(event.target.value)
         console.log(event.target.value);
     }
+    const limparInputs = () => {
+        setNome("");
+        SetNumeroDoCartao("");
+        setDataDeValid("");
+        setFormaDePagamento("");
+        setCodigoCartao("Escolha opção");
+       
+    }
     function botao() {
         //prevent.preventDefault()
         alert('Seu cartão foi cadastrado com sucesso')
-        const limparInputs = () => {
-            setNome("");
-            SetNumeroDoCartao("");
-            setDataDeValid("");
-            setFormaDePagamento("");
-            setCodigoCartao("Escolha opção");
-            limparInputs();
+        
+        limparInputs();
         }
-        {limparInputs};
-        }
+
         return (
             <LayoutDaPagina>
                 {/* Passe as variáveis de estado para o Cartão. Use Props. */}
@@ -67,7 +69,7 @@ function PaginaDoCartao(props) {
                     nome={nome} setNome={setNome}
                     mudarNome={mudarNome}
 
-                    numeroCartao={numeroDoCartao} setNumeroDoCartao={SetNumeroDoCartao} mudarNumeroDoCartao={mudarNumeroDoCartao}
+                    numero={numeroDoCartao} setNumeroDoCartao={SetNumeroDoCartao} mudarNumeroDoCartao={mudarNumeroDoCartao}
 
                     cvc={cvc} setCodigoCartao={setCodigoCartao}
                     mudarCodigoDoCartao={mudarCodigoDoCartao}
